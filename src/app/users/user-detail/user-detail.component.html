@@ -1,0 +1,51 @@
+<div class="dialog">
+  <div class="wrapper">
+    <p>User's Card Detail</p>
+    <mat-tab-group class="table-wrapper">
+      <mat-tab label="Card">
+        <div class="column">
+          <div class="item-block">
+            <div class="title">Name</div>
+            <div>{{data.user.name}}</div>
+          </div>
+          <div class="item-block">
+            <div class="title">Email</div>
+            <div>{{data.user.email}}</div>
+          </div>
+          <div class="item-block">
+            <div class="title">City</div>
+            <div>{{data.user.address.city}}</div>
+          </div>
+          <div class="item-block">
+            <div class="title">Street</div>
+            <div>{{data.user.address.street}}</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="item-block">
+            <div class="title">Suite</div>
+            <div>{{data.user.address.suite}}</div>
+          </div>
+          <div class="item-block">
+            <div class="title">ZIP</div>
+            <div>{{data.user.address.zipcode}}</div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Geo location">
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </mat-tab>
+      <mat-tab label="Music List">
+        <mat-list role="list">
+          <mat-list-item role="listitem" *ngFor="let item of music;let i = index"><span>{{i+1}}</span><span>. </span>{{item.title}}
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="btn" mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

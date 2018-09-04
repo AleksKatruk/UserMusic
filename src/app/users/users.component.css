@@ -1,0 +1,11 @@
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+table.mat-table {
+  margin: 40px 0;
+  width:100%;
+}
+

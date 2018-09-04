@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.mat-tab-body.mat-tab-body-active{
+  height:300px!important;
+}
+.sebm-google-map-container{
+  height:100%;
+}
+.mat-tab-body-content{
+  display:flex;
+  width:100%;
+  box-sizing: border-box;
+}
